@@ -8,16 +8,16 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Portfolio Desarrollo web fullstack Elian Emir Hadad" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="min-h-screen bg-gradient-to-b from-gray-800 to-blue-900">
+	<body class="min-h-screen min-w-full bg-gradient-to-b from-gray-800 to-blue-900">
 		<Header />
 		<slot />
 		<Footer />

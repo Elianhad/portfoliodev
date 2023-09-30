@@ -4,7 +4,6 @@ import type { Pagina } from '../types'
 
 const response = await fetch(`${Astro.url}`+"api/paginas.json")
 const paginas = await response.json() as Pagina[]
-console.log(paginas)
 ---
 
 <section class="mt-12 p-4 container lg:w-[60rem] mx-auto">

@@ -1,6 +1,6 @@
 <section class='mt-8 p-4 container lg:w-[60rem] mx-auto'>
-  <div class='grid grid-flow-col mt-10'>
-    <div class='w-16'>
+  <div class='skill-grid'>
+    <div>
       <!--React Icon -->
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -199,3 +199,10 @@
     </svg>
   </div>
 </section>
+<style is:inline>
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    place-items: center;
+  }
+</style>
