@@ -1,11 +1,12 @@
 ---
 
 ---
-
 <section
   id='contact'
-  class='mt-12 p-4 container lg:w-[60rem] mx-auto flex flex-col justify-center items-center'
+  class='mt-12 flex flex-col justify-center items-center'
 >
+<div class="px-4 py-8 container lg:w-[60rem] mx-auto">
+
   <h3 class='text-center text-3xl font-semibold'>Contactame</h3>
   <form
     method='POST'
@@ -52,22 +53,11 @@
       data-action='submit'>Enviar consulta</button
     >
   </form>
+</div>
 </section>
-<script src='https://www.google.com/recaptcha/api.js' type="module">
-function onSubmit(token:any) {
-  fetch('/recaptcha', {
-    method: 'POST',
-    body: JSON.stringify({ recaptcha: token })
-  })
-    .then((response) => response.json())
-    .then((gResponse) => {
-      if (gResponse.success) {
-        // Verificación del Captcha fue un éxito
-        console.log('paso verificación')
-      } else {
-        // Falló la verificación del Captcha
-        console.log('fallo verificación')
-      }
-    })
-}
-</script>
+<style is:inline>
+  #contact{
+    background-image: url('/symbol-scatter-haikei.svg');
+    background-size: cover;
+  }
+</style>
