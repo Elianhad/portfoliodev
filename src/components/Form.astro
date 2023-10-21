@@ -1,6 +1,28 @@
 ---
-
+import { app } from '../firebase/server'
+import { getFirestore } from 'firebase-admin/firestore'
+const db = getFirestore(app)
+const handleSubmitContact = async (e:SubmitEvent) => {
+  e.preventDefault()
+  const formData = await Astro.request.formData()
+  const name = formData.get('name')?.toString()
+  const email = formData.get('email')?.toString()
+  const description = formData.get('description')?.toString()
+  try {
+    // conect to firebase
+    const emailsRef = db.collection('emails')
+    await emailsRef.add({
+      name,
+      email,
+      description
+    })
+  } catch (e) {
+   console.error(e)
+  }
+}  
 ---
+
+
 <section
   id='contact'
   class='mt-12 flex flex-col justify-center items-center'
@@ -9,8 +31,9 @@
 
   <h3 class='text-center text-3xl font-semibold'>Contactame</h3>
   <form
-    method='POST'
+    method="POST"
     class='mt-6 p-6 mx-auto md:w-2/3 w-full border rounded-md border-gray-300/30 shadow-md shadow-blue-900 my-4 bg-blue-950'
+
   >
     <div class='flex flex-col gap-2'>
       <label for='name'>Escribe tu nombre</label>
