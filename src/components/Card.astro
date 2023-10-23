@@ -12,7 +12,7 @@ const {pagina} = Astro.props
       {
         pagina.tech.map( tag => {
           return (
-            <div class='bg-green-300 font-thin px-1 rounded text-green-900'>
+            <div class='bg-blue-300 font-thin px-1 rounded text-blue-900'>
               <span>#{tag}</span>
             </div>
               )
@@ -25,7 +25,7 @@ const {pagina} = Astro.props
   </div>
   <h3 class="mt-2 font-bold">{pagina.nombre}</h3>
   <div class='flex flex-col items-center justify-center mt-3 p-2'>
-    <a href={pagina.url_github} class="w-full border p-1 rounded mt-3 flex gap-2 text-blue-200 hover:text-green-600 hover:border-green-600 text-sm font-semibold hover:scale-105 transition-all">
+    <a href={pagina.url_github} class="w-full border p-2 rounded mt-3 flex gap-2 text-blue-200 text-sm font-semibold hover:scale-105 transition-all">
       <GitHubIcon />
       Ir a repositorio
     </a>

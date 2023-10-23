@@ -1,0 +1,17 @@
+---
+import FormContact from './form-contact.tsx'
+---
+
+<section id='contact' class='mt-12 flex flex-col justify-center items-center'>
+  <div class='px-4 py-8 container lg:w-[60rem] mx-auto'>
+    <h3 class='text-center text-3xl font-semibold'>Contactame</h3>
+    <FormContact client:visible />
+  </div>
+</section>
+<style is:inline>
+  #contact {
+    background-image: url('/endless-constellation.svg');
+    background-size: contain;
+    background-repeat: repeat;
+  }
+</style>
