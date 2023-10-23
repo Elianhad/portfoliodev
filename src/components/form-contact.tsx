@@ -17,16 +17,17 @@ export default function FormContact() {
       const data = await response.json()
       setMsg(data.msg)
       console.log(data)
-      form?.current?.reset()
     } catch (error: any) {
       console.log(error)
       setError({ status: true, msg: error?.msg })
     }
+    form?.current?.reset()
 
     setTimeout(() => {
       setMsg('')
       setError({ status: false, msg: '' })
     }, 2000)
+
   }
   return (
     <>
