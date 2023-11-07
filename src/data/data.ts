@@ -26,5 +26,14 @@ export const paginas = [
     url_web: 'https://cool-faloodeh-982325.netlify.app/',
     nombre: 'MiduBooks Page',
     tech: ['ViteJs', 'ReactJs', 'Zustand']
+  },
+  {
+    id: '4',
+    imagen:
+      'https://firebasestorage.googleapis.com/v0/b/portfoliodev-3f25b.appspot.com/o/imageweb%2FElian%20Emir%20Hadad%20Portfolio%20Angular%20edicion.png?alt=media&token=eecd1867-d021-49a4-9cae-b4f29cd2a07a',
+    url_github: 'https://github.com/Elianhad/frontend-portfolio-hadad',
+    url_web: 'https://portfolioangular-eeh.web.app/',
+    nombre: 'Portfolio Argentina Programa 4.0',
+    tech: ['Springboot', 'AngularJS', 'Bootstrap', 'Firebase']
   }
 ]

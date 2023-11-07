@@ -74,7 +74,7 @@ export default function FormContact() {
           className='g-recaptcha border border-blue-200 text-blue-200 font-bold uppercase rounded-md mt-4 p-2 hover:text-blue-300 hover:border-blue-300 hover:scale-105 transition-all'
         >Enviar consulta</button>
       </form>
-      {error.status && <ErrorAlert msg={error.msg} />}
+      {error.status && <ErrorAlert msg={error.msg}  />}
       {msg.length > 0 && <SuccessAlert msg={msg} />}
     </>
   )
