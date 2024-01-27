@@ -6,9 +6,9 @@ const response = await fetch(`${Astro.url}`+"api/paginas.json")
 const paginas = await response.json() as Pagina[]
 ---
 
-<section class="mt-12 p-4 container lg:w-[60rem] mx-auto">
+<section class="mt-12 p-4 container lg:w-[60rem] mx-auto flex flex-col">
   <h3 class="text-center text-3xl font-semibold">Proyectos</h3>
-  <div class="grid md:grid-flow-col gap-2 mt-8">
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2 mt-8">
     {
       paginas.map( pagina => {
         return ( <Card pagina={pagina} /> )

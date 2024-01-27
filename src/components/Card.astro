@@ -6,9 +6,10 @@ interface Props {
 }
 const {pagina} = Astro.props
 ---
-<div class="card p-4 shadow-lg shadow-blue-900 my-4 bg-blue-950 rounded">
-  <div class="rounded-lg overflow-hidden h-40 cursor-pointer relative">
-    <div class='flex gap-2 absolute top-2 right-2'>
+<div class="p-2 shadow-lg shadow-blue-900 my-4 mx-auto bg-blue-950 rounded-md relative">
+   
+  <div class="flex flex-col group-hover:opacity-0 transition-opacity ease rounded-sm overflow-hidden group h-40 cursor-pointer">
+    <div class='grid gap-1 absolute top-2 right-2'>
       {
         pagina.tech.map( tag => {
           return (
@@ -18,14 +19,14 @@ const {pagina} = Astro.props
               )
             })
       }
-    </div>
-    <a href={pagina.url_web}>
-      <img src={pagina.imagen } alt={`Imagen ${pagina.nombre}`} class="object-cover object-center">
+  </div>
+    <a href={pagina.url_web} class="group-hover:scale-110  transition-all">
+      <img src={pagina.imagen } alt={`Imagen ${pagina.nombre}`} class="object-contain object-center">
     </a>
   </div>
-  <h3 class="mt-2 font-bold">{pagina.nombre}</h3>
-  <div class='flex flex-col items-center justify-center mt-3 p-2'>
-    <a href={pagina.url_github} class="w-full border p-2 rounded mt-3 flex gap-2 text-blue-200 text-sm font-semibold hover:scale-105 transition-all">
+  <h3 class="z-40 mt-2 font-bold h-10">{pagina.nombre}</h3>
+  <div class='flex flex-col h-16 relative justify-end mt-3 p-2'>
+    <a href={pagina.url_github} class="w-full border p-2 rounded flex gap-2 text-blue-200 text-sm font-semibold hover:scale-105 transition-all">
       <GitHubIcon />
       Ir a repositorio
     </a>
