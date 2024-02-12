@@ -17,11 +17,11 @@ import Stelle from './Stelle.astro';
     </div>
     <div class='py-10'>
       <div id="container-text" class="flex flex-col gap-4 m-4 text-sm md:text-lg text-center max-w-lg font-semibold">
-        <div class="flex gap-2">
+        <div class="flex gap-2 animate-blurred-fade-in">
           <img src="/undraw_starry_window.svg" alt="Hombre mirando al cielo" width="100" height="100" class="w-[5rem] md:w-[10rem]" />
           <p>Cuando era niño miraba las estrellas y pensaba en la <span class="underline">cruz del sur como una guía</span> hacia una meta...<span class="font-semibold text-blue-600 text-xl"> un futuro</span></p>
         </div>
-        <div class="flex gap-2">
+        <div class="flex gap-2 animate-blurred-fade-in animate-delay-250">
           <p >Mi misión es acompañarte a seguir tu punto de referencia para llegar a tu objetivo... tu <span class="font-semibold text-blue-600 text-xl">futuro </span>.</p>
           <img src="/undraw_counting_stars.svg" alt="Mirando estrellas juntos" width="200" height="200" class="w-[10rem] md:w-[15rem]" />
         </div>
@@ -41,15 +41,5 @@ import Stelle from './Stelle.astro';
 <style is:inline>
   #container-text p {
     right: 0%;
-    animation: animateText 4s;
   }
-  @keyframes animateText {
-    0%{
-      opacity: 0%;
-    }
-    100%{
-      opacity:100%;
-    }
-  }  
-  
 </style>
