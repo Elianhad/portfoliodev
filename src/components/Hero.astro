@@ -1,45 +1,39 @@
----
-import Stelle from './Stelle.astro';
----
-<section class='hero w-full relative min-h-[15rem] p-4'>
-  <Stelle />
+<section class='hero w-full relative min-h-[15rem]'>
+  <div
+    class='transparent-gradient bg-hero-bg bg-cover min-h-full w-full absolute -z-10'
+  >
+  </div>
   <div
     class='container lg:w-[60rem] mx-auto p-4 flex flex-col justify-around items-center gap-3'
   >
     <div class='w-36 rounded-full shadow-lg overflow-hidden'>
       <img src='/perfil.jpeg' alt='foto perfil' />
     </div>
+
     <div>
       <h1 class='text-2xl text-center font-bold'>
-        Desarrollo <span class='text-blue-600'>Web</span><br/>
+        Desarrollo <span class='text-blue-600'>Web</span><br />
         <small>Fullstack</small>
       </h1>
     </div>
-    <div class='py-10'>
-      <div id="container-text" class="flex flex-col gap-4 m-4 text-sm md:text-lg text-center max-w-lg font-semibold">
-        <div class="flex gap-2 animate-blurred-fade-in">
-          <img src="/undraw_starry_window.svg" alt="Hombre mirando al cielo" width="100" height="100" class="w-[5rem] md:w-[10rem]" />
-          <p>Cuando era niño miraba las estrellas y pensaba en la <span class="underline">cruz del sur como una guía</span> hacia una meta...<span class="font-semibold text-blue-600 text-xl"> un futuro</span></p>
-        </div>
-        <div class="flex gap-2 animate-blurred-fade-in animate-delay-250">
-          <p >Mi misión es acompañarte a seguir tu punto de referencia para llegar a tu objetivo... tu <span class="font-semibold text-blue-600 text-xl">futuro </span>.</p>
-          <img src="/undraw_counting_stars.svg" alt="Mirando estrellas juntos" width="200" height="200" class="w-[10rem] md:w-[15rem]" />
-        </div>
-      </div>
-      <div class="pt-10">
-        <p class='text-3xl'>
-            Tu web es a la medida de tus <span class='text-blue-600 font-bold'
-            >sueños</span>
-        </p>
-        <a href="#contact"
-          class='block text-center w-1/2 mx-auto mt-10 bg-gradient-to-br from-blue-800 to-blue-600 p-2 rounded-md font-semibold hover:to-blue-800 transition ease'
-          >Más información</a>
-      </div>
+    <div
+      class='transparent-gradient mix-blend-normal mt-10 rounded-md overflow-hidden'
+    >
+      <video autoplay muted>
+        <source
+          src='https://res.cloudinary.com/dksibcbrj/video/upload/v1713029048/portfolio/hero-video_pht04w.mp4'
+          type='video/mp4'
+        />
+      </video>
     </div>
   </div>
 </section>
+
 <style is:inline>
   #container-text p {
     right: 0%;
+  }
+  .transparent-gradient {
+    mask-image: linear-gradient(blue 80%, transparent);
   }
 </style>
